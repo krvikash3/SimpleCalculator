@@ -11,7 +11,7 @@ class Calculator implements ActionListener {
     JButton decButton, equButton, delButton, clrButton;
     JPanel panel;
 
-    Font MyFont = new Font("Ink Free", Font.BOLD, 30);
+    Font MyFont = new Font("Roboto", Font.BOLD, 25);
     double num1, num2, result = 0;
     String operator; // Changed from char to String
 
@@ -19,6 +19,9 @@ class Calculator implements ActionListener {
         frame = new JFrame("MyCalculator");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(420, 550);
+        frame.setResizable(false);
+        frame.setLocationRelativeTo(null); // Centers the window
+
         frame.setLayout(null);
 
         textField = new JTextField();
@@ -62,7 +65,7 @@ class Calculator implements ActionListener {
         panel = new JPanel();
         panel.setBounds(50, 100, 300, 300);
         panel.setLayout(new GridLayout(4, 4, 10, 10));
-        panel.setBackground(Color.GRAY);
+        panel.setBackground(Color.lightGray);
 
         panel.add(numberButtons[1]);
         panel.add(numberButtons[2]);
